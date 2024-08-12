@@ -2,10 +2,10 @@
 lock "~> 3.19.1"
 
 set :application, "Zomato"
-set :repo_url, "git@example.com:me/my_repo.git"
-
+set :repo_url, "git@github.com:Sadique01/Zomato.git"
+ 
 set :branch, :master
-set :deploy_to, '/home/deploy/urlshortner'
+set :deploy_to, '/home/deploy/zomato'
 set :pty, true
 set :linked_files, %w{config/database.yml config/application.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
@@ -19,7 +19,7 @@ set :puma_pid, "#{shared_path}/tmp/pids/puma.pid"
 set :puma_bind, "unix://#{shared_path}/tmp/sockets/puma.sock"    #accept array for multi-bind
 set :puma_conf, "#{shared_path}/puma.rb"
 set :puma_access_log, "#{shared_path}/log/puma_error.log"
-set :puma_error_log, "#{shared_path}/log/puma_access.log"
+set :puma_error_log, "#{shared_path}/log/puma_access.log" 
 set :puma_role, :app
 set :puma_env, fetch(:rack_env, fetch(:rails_env, 'production'))
 set :puma_threads, [0, 8]
