@@ -103,7 +103,10 @@ end
 
 gem 'turbolinks', '~> 5'
 
+gem 'omniauth'
 gem "omniauth-google-oauth2"
 
 gem "omniauth-rails_csrf_protection"
 gem "figaro"
+gem 'dotenv-rails', groups: [:development, :test]
+

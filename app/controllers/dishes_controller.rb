@@ -27,6 +27,7 @@ class DishesController < ApplicationController
   end
 
   def show
+    byebug
     @dish = Dish.find(params[:id])
   end
 
