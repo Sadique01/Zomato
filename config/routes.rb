@@ -16,6 +16,7 @@ Rails.application.routes.draw do
       controllers: {
          omniauth_callbacks: 'users/omniauth_callbacks'
       }
+
   # resources :session, only: [:index]
   # resources :admin
 

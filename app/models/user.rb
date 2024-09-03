@@ -27,10 +27,10 @@ class User < ApplicationRecord
     UserMailer.with(user: self).welcome_email.deliver_later
   end
 
-  def self.from_google(email:, uid: )
-    byebug
-    find_or_create_by!(email: email, uid: uid, provider: 'google_oauth2')
-  end
+def self.from_google(u)
+    create_with(uid: u[:uid],name: u[:email],type: "Owner", provider: 'google',
+                password: Devise.friendly_token[0, 20]).find_or_create_by!(email: u[:email])
+end
 
   def remove_space
     self.name = name.strip
