@@ -13,7 +13,7 @@
     <% if notice %> <p class="alert alert-success"><%= notice %></p> <% end %>
     <% if alert %> <p class="alert alert-danger"><%= alert %></p> <% end %>
 
-    <%# <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload"
 
     <%= javascript_importmap_tags %>
 
@@ -83,14 +83,3 @@
 
   </body>
 </html>
-
-
-<!-- <body>
-  <div class="container">
-    <%= form_with url: "/search_movie", method: :post do |form| %>
-      <label for="name">Name</label>
-      <%= form.text_field :name, id: "name" %><br><br>
-      <%= form.submit %><br>
-    <% end %>
-  </div>
-</body> -->

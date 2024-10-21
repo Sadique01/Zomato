@@ -26,7 +26,7 @@ ActiveAdmin.register Dish do
       f.input :price
       f.input :category_id
       f.semantic_errors :category
-      f.input :dish_image
+      f.input :dish_image 
       f.actions
     end
   end

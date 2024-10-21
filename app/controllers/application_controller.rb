@@ -28,7 +28,6 @@ class ApplicationController < ActionController::Base
   # @user = User.find_by(email: params[:email])
   #   if @user&.authenticate(params[:password])
   #     session[:current_user]= jwt_encode({user_id: @user.id})
-  #     byebug
   #   else
   #     render json: { error: 'Unauthorized' }, status: :unauthorized
   #   end

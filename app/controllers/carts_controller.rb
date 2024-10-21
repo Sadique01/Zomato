@@ -92,7 +92,6 @@ end
 
 # def create
 #   dish=Dish.find(params[:dish_id])
-#   byebug
 #   if current_user.cart.check_unique_restaurent?(dish)
 #     clear_cart
 #     add_cart = current_user.cart.cart_items.new(cart_item_params)

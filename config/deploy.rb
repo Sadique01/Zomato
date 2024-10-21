@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.19.1"
 
-set :application, "Zomato"
+set :application, "zomato"
 set :repo_url, "git@github.com:Sadique01/Zomato.git"
  
 set :branch, :master
