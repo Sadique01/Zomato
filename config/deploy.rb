@@ -28,31 +28,3 @@ set :puma_workers, 0
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true
 set :puma_preload_app, true
-
-namespace :puma do
-    desc 'Create Directories for Puma Pids and Socket'
-    task :make_dirs do
-      on roles(:app) do
-        execute "mkdir #{shared_path}/tmp/sockets -p"
-        execute "mkdir #{shared_path}/tmp/pids -p"
-  
-        Rake::Task['puma:start'].clear_actions
-      end
-    end
-    before :start, :make_dirs
-  end
-
-before 'deploy:starting', 'deploy:skip_assets'
-before "deploy:assets:precompile", "deploy:yarn_install"
-set :conditionally_migrate, true
-
-namespace :deploy do
-  desc 'Skip asset compile'
-  task :skip_assets do
-    puts Airbrussh::Colors.yellow('** Skipping asset compile.')
-    Rake::Task["deploy:assets:backup_manifest"].clear_actions
-    Rake::Task['deploy:assets:precompile'].clear_actions
-    Rake::Task['deploy:migrating'].clear_actions
-  end
-end
-  
