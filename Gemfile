@@ -69,6 +69,7 @@ group :development do
 
   # gem "byebug"
   gem 'active_model_serializers'
+  gem 'cancan'
   gem 'kaminari'
   gem 'rubocop'
   gem 'will_paginate', '~> 4.0'
