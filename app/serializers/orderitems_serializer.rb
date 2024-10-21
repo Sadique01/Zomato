@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class OrderitemsSerializer < ActiveModel::Serializer
+class OrderitemsSerializer < ActiveModel::Serializers
   attributes :id, :dish_name, :dish_price
 
   def dish_name

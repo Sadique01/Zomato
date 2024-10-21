@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class RestaurentSerializer < ActiveModel::Serializer
+class RestaurentSerializer < ActiveModel::Serializers
   attributes :id, :name, :place, :status
 
   has_many :categories

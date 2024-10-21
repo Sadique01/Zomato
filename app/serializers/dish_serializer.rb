@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class DishSerializer < ActiveModel::Serializer
+class DishSerializer < ActiveModel::Serializers
   attributes :id, :name, :price, :dish_type, :image
 
   # def images

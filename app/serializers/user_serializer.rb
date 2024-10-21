@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class UserSerializer < ActiveModel::Serializer
+class UserSerializer < ActiveModel::Serializers
   attributes :id, :name, :email, :type, :image
 
   def image
