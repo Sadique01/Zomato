@@ -1,12 +1,13 @@
 # frozen_string_literal: true
 
 class CartsController < ApplicationController
-  # before_action :set_cart, only: [:index]
+  before_action :set_cart, only: [:index]
   before_action :set_cart_item, only: %i[edit update destroy]
 
   # before_action :find_id ,only: %i[create]
 
   def index
+    byebug
     @carts = current_user.cart.cart_items
   end
 
@@ -29,6 +30,7 @@ class CartsController < ApplicationController
   end
 
   def create
+    byebug
     dish = Dish.find(params[:dish_id])
 
     if current_user.cart.check_unique_restaurent?(dish)
@@ -82,6 +84,7 @@ class CartsController < ApplicationController
   end
 
   def set_cart_item
+    byebug
     @cart_item = current_user.cart.cart_items.find(params[:id])
   end
 

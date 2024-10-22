@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class CartItemSerializer < ActiveModel::Serializers
+class CartItemSerializer < ActiveModel::Serializer
   attributes :id
 
   has_many :dishes
