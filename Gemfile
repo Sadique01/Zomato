@@ -68,7 +68,7 @@ group :development do
   gem 'letter_opener'
 
   # gem "byebug"
-  gem 'active_model_serializers'
+  gem "active_model_serializers", require: true
   gem 'cancan'
   gem 'kaminari'
   gem 'rubocop'

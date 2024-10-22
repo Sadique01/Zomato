@@ -8,7 +8,6 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-require "active_model_serializers"
 module Zomato
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
